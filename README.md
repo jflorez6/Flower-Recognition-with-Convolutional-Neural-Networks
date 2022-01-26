@@ -1,2 +1,2 @@
 # Flower-Recognition-with-Convolutional-Neural-Networks
-I attempt to classify pictures of flowers using Tensorflow. I build my own model and then use transfer learning to see how results change. Will add more flowers to this data set in the future!
+I love admiring flowers out in nature, but I am terrible at identifying them. In this repository I attempt to build an algorithm that can classify pictures of flowers using Tensorflow and teh Flowers Recognition data set. I start out with 5 classes of flowers, each with around ~400 pictures. I build my own model first and then use transfer learning to see how results change. I fully plan on adding more flowers to this data set in the future!
