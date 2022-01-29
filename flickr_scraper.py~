@@ -3,35 +3,14 @@
 import argparse
 import os
 import time
-from PIL import Image
-from pathlib import Path
 
 from flickrapi import FlickrAPI
 
-key = '134d2a721e92e0f2a40f983f164f3f28'  # Flickr API key https://www.flickr.com/services/apps/create/apply
-secret = '9b06e1a97c702bf8'
+from utils.general import download_uri
 
-def download_uri(uri, dir='./'):
-    # Download a file from a given URI, including minimal checks
+key = ''  # Flickr API key https://www.flickr.com/services/apps/create/apply
+secret = ''
 
-    # Download
-    f = dir + os.path.basename(uri)  # filename
-    with open(f, 'wb') as file:
-        file.write(requests.get(uri, timeout=10).content)
-
-    # Rename (remove wildcard characters)
-    src = f  # original name
-    for c in ['%20', '%', '*', '~', '(', ')']:
-        f = f.replace(c, '_')
-    f = f[:f.index('?')] if '?' in f else f  # new name
-    if src != f:
-        os.rename(src, f)  # rename
-
-    # Add suffix (if missing)
-    if Path(f).suffix == '':
-        src = f  # original name
-        f += '.' + Image.open(f).format.lower()  # append PIL format
-        os.rename(src, f)
 
 def get_urls(search='honeybees on flowers', n=10, download=False):
     t = time.time()
