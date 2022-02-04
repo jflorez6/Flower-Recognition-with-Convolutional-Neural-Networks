@@ -12,6 +12,14 @@ If you are interested in downloading more images you are welcome to use the [Ima
 - hashlib
 - yandex-images-download
 
+To run the code in the other notebooks (for actual deep learning), you will need these packages as well:
+
+- numpy
+- pandas
+- matplotlib
+- sklearn
+- Tensorflow
+
 *Note this is not a complete list of packaages required to run the code in this repository. Will add more complete description in the near future!
 
 Lastly, you can visit the two other notebooks in this repository to see how I do [Flower Classification with my own CNN in Tensorflow](./flower-recognition-with-cnn.ipynb
